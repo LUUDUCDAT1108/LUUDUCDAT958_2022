@@ -16,5 +16,7 @@ namespace LuuDucDat2022958.Data
         }
 
         public DbSet<LuuDucDat2022958.Models.PersonLDD2022958> PersonLDD2022958 { get; set; }
+
+        public DbSet<LuuDucDat2022958.Models.LDD0958> LDD0958 { get; set; }
     }
 }
