@@ -14,7 +14,7 @@ namespace LuuDucDat2022958.Controllers
     public class LDD0958Controller : Controller
     {
         private readonly LuuDucDat2022958Context _context;
-
+        StringProcessLDD2022958 Xulychuoi = new StringProcessLDD2022958();
         public LDD0958Controller(LuuDucDat2022958Context context)
         {
             _context = context;
