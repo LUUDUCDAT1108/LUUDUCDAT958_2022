@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LuuDucDat2022958.Models.PersonLDD2022958>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Person</h1>
+
+<p>
+    <a asp-action="Create">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                <label>ID</label>
+            </th>
+            <th>
+                <label>Tên</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonId
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersonId">Sửa</a> |
+                <a asp-action="Delete" asp-route-id="@item.PersonId">Xóa</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
